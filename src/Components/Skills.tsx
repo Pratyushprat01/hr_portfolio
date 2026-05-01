@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./ui/orbital.css";
+import "./orbital.css";
 import { Link } from "react-router-dom";
 import { User, Briefcase, BarChart3, Settings, Database } from "lucide-react";
 

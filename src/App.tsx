@@ -3,7 +3,7 @@ import "./Components/stars.css";
 import { Routes, Route, Link } from "react-router-dom";
 import Skills from "./Components/Skills";
 import Experience from "./Components/Experience";
-import Certificates from "./Components/ui/Certificates";
+import Certificates from "./Components/Certificates";
 
 
 
