@@ -1,13 +1,9 @@
 import { useEffect } from "react";
 import "./Components/stars.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 import Skills from "./Components/Skills";
 import Experience from "./Components/Experience";
 import Certificates from "./Components/Certificates";
-
-
-
-
 
 function App() {
 
@@ -45,7 +41,7 @@ function App() {
       <Route path="/" element={
         <div className="main-container">
 
-          {/* 🌌 BACKGROUND */}
+          {/* BACKGROUND */}
           <div className="stars"></div>
 
           <div className="medium-stars">
@@ -58,7 +54,7 @@ function App() {
             <span></span><span></span>
           </div>
 
-          {/* 🧭 NAVBAR */}
+          {/* NAVBAR */}
           <div className="navbar">
             <h2>Portfolio</h2>
             <ul>
@@ -69,7 +65,7 @@ function App() {
             </ul>
           </div>
 
-          {/* 🔥 HERO */}
+          {/* HERO */}
           <div className="hero">
             <div className="left">
               <h1>
@@ -83,7 +79,7 @@ function App() {
               </p>
 
               <div className="buttons">
-                <a href="/Anushka Srivastava.pdf" download className="btn primary">
+                <a href="/Anushka_Srivastava.pdf" download className="btn primary">
                   Download CV
                 </a>
 
@@ -117,16 +113,13 @@ function App() {
         </div>
       } />
 
-      {/* ✅ EXPERIENCE PAGE */}
+      {/* OTHER PAGES */}
       <Route path="/experience" element={<Experience />} />
-
-      
-
-      {/* (optional placeholders) */}
       <Route path="/skills" element={<Skills />} />
-
-      {/* ✅ CERTIFICATES PAGE (ADDED) */} 
       <Route path="/certificates" element={<Certificates />} />
+
+      {/* ✅ FALLBACK (VERY IMPORTANT) */}
+      <Route path="*" element={<Navigate to="/" />} />
 
     </Routes>
   );
