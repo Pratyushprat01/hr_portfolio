@@ -1,0 +1,213 @@
+/* WRAPPER */
+.orbit-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 🔥 PREMIUM BLACK BACKGROUND */
+background:
+  radial-gradient(circle at 50% 40%, rgba(127, 90, 240, 0.12), transparent 60%),
+  radial-gradient(circle at 80% 70%, rgba(0, 198, 255, 0.08), transparent 60%),
+  radial-gradient(circle at 20% 90%, rgba(255,255,255,0.03), transparent 70%),
+  #000;
+}
+
+
+/* CONTAINER */
+.orbit-container {
+  position: relative;
+  width: 420px;
+  height: 420px;
+}
+
+/* CENTER GLOW (LESS BLUE, MORE VIOLET) */
+.orbit-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  background: radial-gradient(circle at 30% 30%, #a78bfa, #7f5af0 60%, #5b21b6);
+
+  /* 🔥 MULTI LAYER PREMIUM GLOW */
+  box-shadow:
+    0 0 20px rgba(167, 139, 250, 0.9),
+    0 0 40px rgba(127, 90, 240, 0.8),
+    0 0 80px rgba(127, 90, 240, 0.6),
+    0 0 140px rgba(127, 90, 240, 0.35);
+
+  animation: centerPulse 4s ease-in-out infinite;
+}
+
+/* PULSE */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+}
+
+/* RING (SUBTLE) */
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 0 20px rgba(167,139,250,0.08);
+}
+
+/* NODE WRAPPER */
+.orbit-node-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  left: 50%;  z-index: 1;
+ 
+}
+
+.orbit-node.dim {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* ICON */
+.orbit-node {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  background: rgba(20, 20, 25, 0.9);
+  border: 1px solid rgba(255,255,255,0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #eaeaea;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  backdrop-filter: blur(6px);
+}
+
+/* 🔥 FIXED HOVER (SOFT VIOLET GLOW — NOT NEON) */
+.orbit-node:hover {
+  transform: scale(1.08);
+
+  border-color: rgba(180,160,255,0.5);
+
+  background: rgba(35, 30, 55, 0.85);
+
+  box-shadow:
+    0 0 6px rgba(180,160,255,0.4),
+    0 0 14px rgba(180,160,255,0.25);
+}
+
+/* ACTIVE NODE */
+.orbit-node.active {
+  transform: scale(1.2);
+
+  background: #ffffff;
+  color: black;
+
+  box-shadow:
+    0 0 12px rgba(255,255,255,0.6),
+    0 0 20px rgba(255,255,255,0.3);
+}
+
+/* LABEL */
+.node-label {
+  position: absolute;
+  top: 58px;
+  font-size: 11px;
+  width: 140px;
+  text-align: center;
+  color: rgba(255,255,255,0.6);
+
+  transition: 0.3s;
+}
+
+/* LABEL HOVER */
+.orbit-node:hover + .node-label {
+  color: #e6e6ff;
+  text-shadow: 0 0 6px rgba(180,160,255,0.4);
+}
+
+/* CARD (LESS BLUE, MORE GLASS) */
+.orbit-card {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+
+  width: 300px;
+  padding: 16px;
+  border-radius: 14px;
+
+  background: rgba(15, 20, 35, 0.7);
+  backdrop-filter: blur(22px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.9);
+
+  animation: cardPop 0.3s ease forwards;
+   z-index: 1000;
+}
+
+/* CARD ANIMATION */
+@keyframes cardPop {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* SKILLS */
+.skill-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.skill-box {
+  padding: 6px 10px;
+  font-size: 11px;
+  border-radius: 8px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  color: #ddd;
+
+  transition: 0.25s;
+}
+
+/* SKILL HOVER (SUBTLE) */
+.skill-box:hover {
+  background: rgba(180,160,255,0.2);
+  border-color: rgba(180,160,255,0.4);
+}
+
+
