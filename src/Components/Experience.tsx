@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./experience.css";
 import Round from "../Components/round";
+import { Link } from "react-router-dom";
+
 
 const data = [
   {
@@ -105,10 +107,10 @@ useEffect(() => {
       <div className="navbar">
         <h2>Portfolio</h2>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li className="active"><a href="/experience">Experience</a></li>
-          <li><a href="/skills">Skills</a></li>
-          <li><a href="/certificates">Certificates</a></li>
+          <li className="active"><Link to="/">Home</Link></li>
+          <li><Link to="/experience">Experience</Link></li>
+          <li><Link to="/skills">Skills</Link></li>
+          <li><Link to="/certificates">Certificates</Link></li>
         </ul>
       </div>
 

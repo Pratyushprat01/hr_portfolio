@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./certificates.css";
 import ExpandableGallery from "./ExpandableGallery";
+import { Link } from "react-router-dom";
+
 
 const images = [
   "/cert1.png",
@@ -44,10 +46,10 @@ export default function Certificates() {
       <div className="navbar">
         <h2>Portfolio</h2>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/experience">Experience</a></li>
-          <li><a href="/skills">Skills</a></li>
-          <li className="active"><a href="/certificates">Certificates</a></li>
+          <li><Link to="/">Home</Link></li>
+            <li><Link to="/experience">Experience</Link></li>
+            <li><Link to="/skills">Skills</Link></li>
+            <li className="active"><Link to="/certificates">Certificates</Link></li>
         </ul>
       </div>
 

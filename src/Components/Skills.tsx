@@ -95,10 +95,10 @@ export default function Skills() {
       <div className="navbar">
         <h2>Portfolio</h2>
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/experience">Experience</Link></li>
-          <li className="active"><Link to="/skills">Skills</Link></li>
-          <li><Link to="/certificates">Certificates</Link></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/experience">Experience</Link></li>
+            <li className="active"><Link to="/skills">Skills</Link></li>
+            <li><Link to="/certificates">Certificates</Link></li>
         </ul>
       </div>
 
