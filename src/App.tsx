@@ -10,6 +10,7 @@ import Certificates from "./Components/ui/Certificates";
 
 
 function App() {
+
   useEffect(() => {
     let mouseX = 0;
     let mouseY = 0;
@@ -125,7 +126,7 @@ function App() {
       <Route path="/skills" element={<Skills />} />
 
       {/* ✅ CERTIFICATES PAGE (ADDED) */} 
-      <Route path="/Certificates" element={<Certificates />} />
+      <Route path="/certificates" element={<Certificates />} />
 
     </Routes>
   );
