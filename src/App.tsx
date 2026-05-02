@@ -79,7 +79,7 @@ function App() {
               </p>
 
               <div className="buttons">
-                <a href="/Anushka_Srivastava.pdf" download className="btn primary">
+                <a href="/Anushka Srivastava_CV.pdf" download className="btn primary">
                   Download CV
                 </a>
 
